@@ -68,7 +68,7 @@ dotnet publish .\src\DroidSwitcher.csproj -c Release -r win-x64 --self-contained
 
 开发时已验证 Windows keyring 真实登录解密，以及两个已保存账号的真实 Standard/Core 额度查询。真实会话只进行读取和预览；共享与恢复流程使用模拟会话验证。
 
-`docs/windows-build.yml.example` 提供 GitHub Actions 的 Windows 构建与测试示例。当前仓库尚未启用自动工作流；需要时可将该示例放到 `.github/workflows/build.yml`。
+GitHub Actions 已启用，在 Windows 上构建并运行上述模拟测试。`docs/windows-build.yml.example` 另提供可复用的工作流示例。
 
 ## 许可与致谢
 
