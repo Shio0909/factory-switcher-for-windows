@@ -1,0 +1,13 @@
+**/bin/
+**/obj/
+dist/
+data/
+test-results/
+settings.json
+*.dpapi
+*.pdb
+auth*
+*.jsonl
+*.zip
+*.exe
+*.dll

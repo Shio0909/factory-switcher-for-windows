@@ -1,0 +1,129 @@
+{
+  "passed": true,
+  "tests": [
+    {
+      "name": "AES-GCM 16-byte nonce cross-check against Python cryptography",
+      "passed": true
+    },
+    {
+      "name": "DPAPI round-trip and plaintext absent on disk",
+      "passed": true
+    },
+    {
+      "name": "Authentication tampering rejected",
+      "passed": true
+    },
+    {
+      "name": "Unknown secure storage rejected",
+      "passed": true
+    },
+    {
+      "name": "Incomplete login rejected",
+      "passed": true
+    },
+    {
+      "name": "Capture and account deduplication",
+      "passed": true
+    },
+    {
+      "name": "Switch preserves settings and session organization markers",
+      "passed": true
+    },
+    {
+      "name": "Failure between credential writes rolls back",
+      "passed": true
+    },
+    {
+      "name": "Crash journal survives restart and restores previous auth",
+      "passed": true
+    },
+    {
+      "name": "Externally changed login cannot overwrite saved account",
+      "passed": true
+    },
+    {
+      "name": "Refreshed current auth is synchronized before switching",
+      "passed": true
+    },
+    {
+      "name": "Store lock blocks concurrent mutations",
+      "passed": true
+    },
+    {
+      "name": "Droid write lock blocks credential reads",
+      "passed": true
+    },
+    {
+      "name": "Removing a snapshot leaves live auth unchanged",
+      "passed": true
+    },
+    {
+      "name": "New login persists across restart and cancellation preserves saved accounts",
+      "passed": true
+    },
+    {
+      "name": "Reauthentication cannot be overwritten by old active login",
+      "passed": true
+    },
+    {
+      "name": "Windows credential API round-trip using a disposable test entry",
+      "passed": true
+    },
+    {
+      "name": "Secure snapshots switch keys and rollback restores the original system key",
+      "passed": true
+    },
+    {
+      "name": "Switching from empty auth restores the original absent system credential on failure",
+      "passed": true
+    },
+    {
+      "name": "Background Droid blocks switching but allows isolated login and snapshot saving",
+      "passed": true
+    },
+    {
+      "name": "Quota missing fields remain unknown and elapsed windows remain idle",
+      "passed": true
+    },
+    {
+      "name": "Quota client sends credentials only to official endpoints with correct organization",
+      "passed": true
+    },
+    {
+      "name": "Expired inactive login rotates once and persists before quota fetch",
+      "passed": true
+    },
+    {
+      "name": "Failed OAuth refresh is not retried and cannot replace saved login",
+      "passed": true
+    },
+    {
+      "name": "Token renewal rejects mismatched identity and preserves credential fields",
+      "passed": true
+    },
+    {
+      "name": "Session sharing affects selected header only and creates encrypted verified backup",
+      "passed": true
+    },
+    {
+      "name": "Session restoration preserves newly appended messages and other header edits",
+      "passed": true
+    },
+    {
+      "name": "Session batch failure restores all changed metadata",
+      "passed": true
+    },
+    {
+      "name": "Restoration refuses unrelated organization rebinding",
+      "passed": true
+    },
+    {
+      "name": "Session scope rejects traversal and alternate data streams",
+      "passed": true
+    },
+    {
+      "name": "Interrupted session operation can restore from persistent backup",
+      "passed": true
+    }
+  ]
+}

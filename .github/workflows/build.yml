@@ -1,0 +1,29 @@
+name: Windows build and tests
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '9.0.x'
+      - name: Build portable executable
+        run: dotnet publish src/DroidSwitcher.csproj -c Release -r win-x64 --self-contained false -p:PublishSingleFile=true -o dist
+      - name: Run synthetic tests
+        shell: pwsh
+        run: |
+          $testRun = Start-Process -FilePath "$pwd/dist/DroidSwitcher.exe" -ArgumentList '--self-test test-results' -Wait -PassThru
+          if ($testRun.ExitCode -ne 0) { Get-Content test-results/self-test.json; throw 'Synthetic tests failed' }
+          Get-Content test-results/self-test.json
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: windows-test-results
+          path: test-results/self-test.json
